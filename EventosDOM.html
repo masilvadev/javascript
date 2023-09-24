@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15pt arial;
+            background-color: rgb(14, 97, 14);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicou()" onmouseenter="entrar()" onmouseout="sair()"> <!--também pode colocar isso tudo dentro do script com addEventListener e apagar esse daqui -->
+        Intereja aqui....
+    </div>
+    <script>
+        var div1 = window.document.getElementById('area')
+        div1.addEventListener('click', clicou)
+        div1.addEventListener('mouseenter', entrar)
+        div1.addEventListener('mouseout', sair)
+
+        function clicou() {
+            div1.innerText = 'Você clicou!'
+            div1.style.background = 'red'
+        }
+        function entrar(){
+            div1.innerText = 'Entrou'
+        }
+        function sair(){
+            div1.innerText = 'Saiu'
+            div1.style.background = 'rgb(14, 97, 14)'
+        }
+    </script>
+</body>
+</html>

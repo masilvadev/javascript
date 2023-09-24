@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com dom</title>
+    <style>
+        body{
+            background-color: rgba(247, 205, 155, 0.774);
+            color: black;
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <script>
+        //getElementsByTagName()
+        //getElementsById()
+        //getElementsByTName()
+        //getElementsByClassName()
+        // querySelector()
+        // querySelectorAll()
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] //SELECIONA POR MARCA
+        corpo.style.background = 'gray'
+        p1.style.color = 'white'
+        document.write(p1.innerHTML)
+        document.write(p1.innerText)
+        /*p1.innerText = 'estou estudando javascript'*/
+    </script>
+</body>
+</html>

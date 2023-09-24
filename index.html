@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('qual é o seu nome?')
+        window.alert('prazer em te conhecer, ' + nome + '!')
+        document.write(`seu nome tem ${nome.length} letras <br> `) //USA CRASE
+        document.write(`seu nome em maiúsculo é ${nome.toUpperCase()} <br> `) //USA CRASE
+        document.write(`seu nome em minúsculo é ${nome.toLowerCase()}`) //USA CRASE
+         
+        // (number + number) adição
+        // (string + string) para concatenação
+        // prompt trata as coisas como string
+    </script>
+
+    <script>
+        var n1 = Number(window.prompt('digite um número: ')) //String
+        var n2 = Number(window.prompt('digite outro número: ')) //String
+        var s = n1 + n2
+        window.alert('a soma vai ser: ' + String(s)) 
+    </script>
+
+    <script>
+        var n1 = Number(window.prompt('digite um número: ')) //String
+        var n2 = Number(window.prompt('digite outro número: ')) //String
+        var s = n1 + n2
+        window.alert(`a soma entre ${n1} e ${n2} é igual a ${s}`) //USA CRASE
+    </script>
+
+
+
+</body>
+</html>

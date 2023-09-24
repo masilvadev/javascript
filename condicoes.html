@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicões</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('imagens/fiscalizacao.jpg');
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        section{
+            background-color: rgba(255, 255, 255, 0.815);
+            border: 1px solid black;
+            padding: 5px;
+            position: absolute;
+            width: 380px;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50px);
+        }
+
+        h1{
+            color: darkblue;
+            text-align: center;
+        }
+
+        h3{
+            text-align: center;
+            margin: 30px 0px;
+        }
+
+        input{
+            border: 1px solid black;
+        }
+
+        div#res{
+            margin: 40px 0px;
+            display: block;
+        }
+
+        img{
+            margin: 30px 0px;
+            display: none;
+        }
+
+        script{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Sistema de Multa</h1>
+        <h3>A velocidade máxima da via é 80 km/h</h3>
+        <label for="n1">Sua velocidade (km/h): </label>
+        <input type="number" name="number" id="velocidade">
+        <input type="button" value="Verificar" onclick="surgir()">
+        <div id="res"></div>
+        <img src="imagens/prf.jpeg" alt="" width="350px" id="prf" onresize="aparecer()">
+        <script>
+            function surgir(){
+                var caixa1 = window.document.getElementById('velocidade')
+                var n1 = Number(caixa1.value)
+                var res = window.document.getElementById('res')
+                if(n1 > 80){
+                    res.innerHTML = '<strong>VOCÊ FOI MULTADO PELA PRF<br>VALOR DA MULTA: R$ 3500</strong>'
+                    res.style.color = 'red'
+                    prf.style.display = 'block'
+                } else{
+                    res.innerHTML = '<strong>Dentro do limite de velocidade da via. Siga em frente com cuidado.</strong>'
+                    res.style.color = 'black'
+                    prf.style.display = 'none'
+                }
+            }
+        
+        </script>
+    </section>
+</body>
+</html>
