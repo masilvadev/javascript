@@ -75,11 +75,11 @@
                 var n1 = Number(caixa1.value)
                 var res = window.document.getElementById('res')
                 if(n1 > 80){
-                    res.innerHTML = '<strong>VOCÊ FOI MULTADO PELA PRF<br>VALOR DA MULTA: R$ 3500</strong>'
+                    res.innerHTML = `<strong>SUA VELOCIDADE É ${n1} km/h.<br><br> VOCÊ FOI MULTADO PELA PRF<br><br>VALOR DA MULTA: R$ 3500</strong>`
                     res.style.color = 'red'
                     prf.style.display = 'block'
                 } else{
-                    res.innerHTML = '<strong>Dentro do limite de velocidade da via. Siga em frente com cuidado.</strong>'
+                    res.innerHTML = `<strong>A velocidade ${n1} km/h está dentro dos limites da via.<br> Siga em frente com cuidado.</strong>`
                     res.style.color = 'black'
                     prf.style.display = 'none'
                 }
