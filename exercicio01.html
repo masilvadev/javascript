@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Javascript</title>
+    <style>
+        body{
+            background-color: rgb(128, 173, 233);
+        }
+
+        h1{
+            text-align: center;
+            text-shadow: 1px 0px 1px black;
+            color: white;
+
+        }
+
+        section{
+            background-color: white;
+            padding: 10px;
+            border-radius: 15px;
+            width: 50vw;
+            margin: auto;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.363);
+        }
+
+        div#hora, div#foto{
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        input#txtano{
+            width: 80px;
+        }
+
+        div#res{
+            text-align: center;
+            margin: 20px 0px;
+        }
+      
+        img#imagem{
+            border-radius: 130px;
+            width: 150px;
+        }
+
+        img{
+            width: 150px;
+        }
+
+        button{
+            display: block;
+            margin-top: 10px;
+        }
+
+        footer{
+            font-style: italic;
+            text-align: center;
+            color: white;
+        }
+
+        
+
+    </style>
+</head>
+<body onload="carregar()">
+    <h1>Hora do dia</h1>
+    <section>
+        <div id="hora">
+            Texto vai aparecer aqui
+        </div>
+        <div id="foto">
+            <img id="imagem" src="imagens/dia.jpg" alt="foto do dia">
+        </div>
+    </section>
+    <section>
+        <div>
+            <p>
+                <label for="ano">Ano de Nascimento:</label>
+                <input type="number" name="idade" id="txtano" min="1900">
+            </p>
+            <p>
+                <label for="">Sexo:</label>
+                <input type="radio" name="sexo" id="masculino" checked>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino">
+                <label for="feminino">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+            
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>Feito por Marco &copy;</p>
+    </footer>
+    <script src="exercicio01.js"></script>
+</body>
+</html>
