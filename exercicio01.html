@@ -9,20 +9,14 @@
             background-color: rgb(128, 173, 233);
         }
 
-        h1{
-            text-align: center;
-            text-shadow: 1px 0px 1px black;
-            color: white;
-
-        }
-
         section{
             background-color: white;
             padding: 10px;
             border-radius: 15px;
-            width: 50vw;
+            width: 65vw;
             margin: auto;
             margin-bottom: 20px;
+            margin-top: 20px;
             box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.363);
         }
 
@@ -32,11 +26,11 @@
             font-size: 18px;
         }
 
-        input#txtano{
+        input#txtano, input#txtinicio, input#txtfim, input#txtintervalo, input#txttabuada{
             width: 80px;
         }
 
-        div#res{
+        div#res1, div#res2, div#res3{
             text-align: center;
             margin: 20px 0px;
         }
@@ -50,23 +44,15 @@
             width: 150px;
         }
 
-        button{
-            display: block;
-            margin-top: 10px;
-        }
-
         footer{
             font-style: italic;
             text-align: center;
             color: white;
         }
 
-        
-
     </style>
 </head>
 <body onload="carregar()">
-    <h1>Hora do dia</h1>
     <section>
         <div id="hora">
             Texto vai aparecer aqui
@@ -75,7 +61,7 @@
             <img id="imagem" src="imagens/dia.jpg" alt="foto do dia">
         </div>
     </section>
-    <section>
+    <section >
         <div>
             <p>
                 <label for="ano">Ano de Nascimento:</label>
@@ -93,8 +79,42 @@
             </p>
             
         </div>
-        <div id="res">
+        <div id="res1">
             Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <section>
+        <div>
+            <p>
+                <label for="txtinicio">Início:</label>
+                <input type="number" name="txtinicio" id="txtinicio">
+            </p>
+            <p>
+                <label for="txtfim">Fim:</label>
+                <input type="number" name="txtifim" id="txtfim">
+            </p>
+            <p>
+                <label for="txtintervalo">Intervalo:</label>
+                <input type="number" name="txtintervalo" id="txtintervalo">
+            </p>
+            <p>
+                <input type="button" value="Contar" onclick="contar()">
+            </p>
+        </div>
+        <div id="res2">
+            Preparando contagem...
+        </div>
+    </section>
+    <section>
+        <div>
+            <p>
+                <label for="txttabuada">Número:</label>
+                <input type="number" name="" id="txttabuada" placeholder="1 a 10" min="1" max="10"  >
+            </p>
+            <input type="button" value="Gerar tabuada" onclick="tabuada()">
+        </div>
+        <div id="res3">
+            Digite o n
         </div>
     </section>
     <footer>

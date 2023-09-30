@@ -21,7 +21,7 @@ function verificar(){
     var data = new Date()
     var ano = data.getFullYear()
     var formularioano = document.getElementById('txtano')
-    var res = document.getElementById('res')
+    var res = document.getElementById('res1')
     if (formularioano.value < 1900 || formularioano.value > ano) {
         window.alert('[ERRO] Verifique os dados e tente novamente')
     } else{
@@ -53,4 +53,41 @@ function verificar(){
         res.appendChild(img)
     }
 
+}
+
+function contar(){
+    var inicio = document.getElementById('txtinicio')
+    var fim = document.getElementById('txtfim')
+    var intervalo = document.getElementById('txtintervalo')
+    var resultado = document.getElementById('res2')
+    var n1 = Number(inicio.value)
+    var n2 = Number(fim.value)
+    var n3 = Number(intervalo.value)
+
+    if (inicio.value.length == 0 || fim.value.length == 0 || intervalo.value.length == 0){
+        alert('[ERRO] Está faltando dados!.')
+    } else {
+        if (n3 <= 0) {
+            alert('Intervalo inválido. Considere o intervalo de 1 em diante.')
+            n3 = 1
+        }
+        resultado.innerHTML = 'Contando:<br>'
+        if (n1 < n2) { //contagem crescente
+            for(var c = n1; c <= n2; c += n3) /*é o mesmo que c = c + n3*/{
+                resultado.innerHTML += ` ${c} \u{1F449}`
+            }
+        } else { //contagem decrescente
+            for(var c = n1; c >= n2; c -= n3){
+                resultado.innerHTML += ` ${c} \u{1F449}`
+            }
+        }
+        resultado.innerHTML += `\u{1F3C1}`
+    }
+}
+
+function tabuada(){
+    var txttabuada = document.getElementById('txttabuada')
+    var res3 = document.getElementById('res3')
+    var num = Number(txttabuada.value)
+    res3.innerHTML = 'Tabuada: '
 }
