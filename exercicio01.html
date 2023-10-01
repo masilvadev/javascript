@@ -34,6 +34,10 @@
             text-align: center;
             margin: 20px 0px;
         }
+
+        div#res3{
+            margin: 10px 0px;
+        }
       
         img#imagem{
             border-radius: 130px;
@@ -42,6 +46,10 @@
 
         img{
             width: 150px;
+        }
+
+        select{
+            padding: 5px;
         }
 
         footer{
@@ -109,12 +117,14 @@
         <div>
             <p>
                 <label for="txttabuada">Número:</label>
-                <input type="number" name="" id="txttabuada" placeholder="1 a 10" min="1" max="10"  >
+                <input type="number" name="" id="txttabuada" placeholder="0 a 10" min="1" max="10"  >
             </p>
             <input type="button" value="Gerar tabuada" onclick="tabuada()">
         </div>
         <div id="res3">
-            Digite o n
+            <select size="10" id="tabuada">
+                <option>Digite um número de 0 a 10</option>
+            </select>
         </div>
     </section>
     <footer>

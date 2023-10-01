@@ -17,7 +17,7 @@ function carregar() {
     }
 }
 
-function verificar(){
+function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
     var formularioano = document.getElementById('txtano')
@@ -55,7 +55,7 @@ function verificar(){
 
 }
 
-function contar(){
+function contar() {
     var inicio = document.getElementById('txtinicio')
     var fim = document.getElementById('txtfim')
     var intervalo = document.getElementById('txtintervalo')
@@ -85,9 +85,21 @@ function contar(){
     }
 }
 
-function tabuada(){
+function tabuada() {
     var txttabuada = document.getElementById('txttabuada')
-    var res3 = document.getElementById('res3')
+    var tabuada = document.getElementById('tabuada')
     var num = Number(txttabuada.value)
-    res3.innerHTML = 'Tabuada: '
+    if(txttabuada.value.length == 0 || txttabuada.value > 10 | txttabuada.value < -10) {
+        alert('Digite um número de 0 a 10')
+    } else {
+        var c = 1
+        tabuada.innerHTML = ''
+        while (c <= 10) {
+            var item = document.createElement('option')
+            item.text = `${num} x ${c} = ${num*c}`
+            item.value = `tab${c}` //útil pro php, aqui muda nd não
+            tabuada.appendChild(item)
+            c++
+        }
+    }
 }
