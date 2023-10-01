@@ -88,17 +88,25 @@ function contar() {
 function tabuada() {
     var txttabuada = document.getElementById('txttabuada')
     var tabuada = document.getElementById('tabuada')
+    var res3 = document.getElementById('res3')
     var num = Number(txttabuada.value)
     if(txttabuada.value.length == 0 || txttabuada.value > 10 | txttabuada.value < -10) {
         alert('Digite um número de 0 a 10')
     } else {
         var c = 1
-        tabuada.innerHTML = ''
+        res3.innerHTML = ''
+        res3.style.textAlign = 'justify'
+        res3.style.margin = '15px'
+        //tabuada.innerHTML = ''
+
         while (c <= 10) {
-            var item = document.createElement('option')
+            //SE QUISER COLOCAR DENTRO DE UM SELECT
+            /* var item = document.createElement('option')
             item.text = `${num} x ${c} = ${num*c}`
             item.value = `tab${c}` //útil pro php, aqui muda nd não
-            tabuada.appendChild(item)
+            tabuada.appendChild(item) 
+            c++ */
+            res3.innerHTML += `${num} x ${c} = ${num*c} <br>`
             c++
         }
     }
