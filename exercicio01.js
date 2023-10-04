@@ -165,10 +165,10 @@ function finalizar() {
                 menor = valores[pos]
         }
         res4.innerHTML = ''
-        res4.innerHTML += `Temos ${total} valores cadastrados <br>`
-        res4.innerHTML += `O maior valor informado é ${maior} <br>`
-        res4.innerHTML += `O menor valor informado é ${menor} <br>`
-        res4.innerHTML += `A soma dos valores informados é ${soma} <br>`
-        res4.innerHTML += `A média dos valores informados é ${media} <br>`
+        res4.innerHTML += `Quantidade de valores cadastrados: <strong>${total}<strong> <br> <br>`
+        res4.innerHTML += `Maior valor informado: <strong>${maior}</strong> <br><br>`
+        res4.innerHTML += `Menor valor informado <strong>${menor}</strong> <br><br>`
+        res4.innerHTML += `Soma dos valores: <strong>${soma}<strong> <br><br>`
+        res4.innerHTML += `Média dos valores: <strong>${media}<strong> <br><br>`
     }
 }
