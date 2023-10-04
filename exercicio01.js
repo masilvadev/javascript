@@ -111,3 +111,64 @@ function tabuada() {
         }
     }
 }
+
+//---------------------exercicio da variavel composta---------------
+
+let campo = document.getElementById('txtcampo')
+let add = document.getElementById('add')
+let res4 = document.getElementById('res4')
+let valores = []
+
+function numero(n) {
+    if (Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function lista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function adicionar() {
+    if (numero(campo.value) && !lista(campo.value, valores)) {
+        valores.push(Number(campo.value))
+        add.innerHTML += `Valor ${campo.value} adicionado.<br>`
+        res4.innerHTML = ''
+    } else {
+        alert('Valor inválido ou já encontrado na lista')
+    }
+    campo.value = ''
+    add.style.display = 'block'
+}
+
+function finalizar() {
+    if (valores.length == 0) {
+        alert('Adicione valores antes de finalizar')
+    } else {
+        let total = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for (let pos in valores) {
+            soma += valores[pos]
+            media += valores[pos]/valores.length // TAMBÉM FUNCIONA: media = soma / total 
+            if (valores[pos] > maior)
+                maior = valores[pos]
+            if (valores[pos] < menor)
+                menor = valores[pos]
+        }
+        res4.innerHTML = ''
+        res4.innerHTML += `Temos ${total} valores cadastrados <br>`
+        res4.innerHTML += `O maior valor informado é ${maior} <br>`
+        res4.innerHTML += `O menor valor informado é ${menor} <br>`
+        res4.innerHTML += `A soma dos valores informados é ${soma} <br>`
+        res4.innerHTML += `A média dos valores informados é ${media} <br>`
+    }
+}

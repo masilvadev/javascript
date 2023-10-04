@@ -20,3 +20,12 @@ for (c = 1; c<=10; c++){
     document.write('OLÁ <br>')
 }
 
+//outro exemplo só que usando variaveis compostas
+function fatorial(n) {
+    let fat = 1
+    for (let c = n; c > 1; c--) {
+        fat *= c
+    }
+    return fat
+}
+console.log(fatorial(5))
